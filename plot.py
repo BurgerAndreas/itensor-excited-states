@@ -31,7 +31,7 @@ def plot_energies(fname='ising32'):
     for e in range(np.shape(energies)[1]):
         plt.plot(j, energies[:, e], marker='x', lw=1, ms=4, label='E' + str(e))
     # plt.grid(axis='both')
-    plt.title('Energies')
+    plt.title('Energies ' + fname)
     plt.ylabel('energy')
     plt.xlabel('J')
     plt.legend(loc="upper right")
@@ -46,7 +46,7 @@ def plot_energies(fname='ising32'):
         diff = np.abs(energies[:, 0] - energies[:, e + 1])
         plt.plot(j, diff, marker='x', lw=1, ms=4, label='|E0-E' + str(e+1) + '|')
     # plt.grid(axis='both')
-    plt.title('Energy gap')
+    plt.title('Energy gap ' + fname)
     plt.ylabel('energy gap')
     plt.xlabel('J')
     plt.legend(loc="upper right")
@@ -57,4 +57,8 @@ def plot_energies(fname='ising32'):
     plt.clf()
 
 
-plot_energies(fname='ising32')
+# ising16, ising32, heisenberg16, heisenberg32
+plot_energies(fname='ising16')
+#plot_energies(fname='ising32')
+#plot_energies(fname='heisenberg16')
+#plot_energies(fname='heisenberg32')
