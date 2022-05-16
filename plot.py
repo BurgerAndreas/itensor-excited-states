@@ -7,7 +7,7 @@ plot_folder = './plots/'
 
 
 # plot energy in file ./log_folder/fname_energies.csv
-def plot_energies(fname='dmrg'):
+def plot_energies(fname='ising32'):
     # readout energies
     log_file = log_folder + fname + '_energies.csv'
     j = []
@@ -22,6 +22,10 @@ def plot_energies(fname='dmrg'):
                 energies.append(row[1:])
     energies = np.array(energies, dtype=float)
     ofile.close()
+
+    # sort energies, in case GS converged to an excited state
+    for cnt, row in enumerate(energies):
+        energies[cnt] = np.sort(energies[cnt])
 
     # plot energies
     for e in range(np.shape(energies)[1]):
@@ -53,4 +57,4 @@ def plot_energies(fname='dmrg'):
     plt.clf()
 
 
-plot_energies(fname='ising')
+plot_energies(fname='ising32')
