@@ -1,3 +1,5 @@
+# ITensor excited states
+
 Finding excited states using the ITensor library
 Examples: 1d Ising and 1d Heisenberg model
 
@@ -9,7 +11,8 @@ http://itensor.org/
 Excited states code to large parts by Heitor Peres Casagrande
 https://github.com/heitorc7
 
-# Starting guide
+
+## Starting guide
 (0) Download and build ITensor
 http://itensor.org/docs.cgi?vers=cppv3&page=install
 git clone https://github.com/ITensor/ITensor itensor
@@ -28,4 +31,10 @@ make
 
 (3) Optional: Plot
 Run plot.py
+
+
+## SyTen reference calculations
+In SyTen-results there are reference calculations using the SyTen library
+by Claudius Hubig, Felix Lachenmaier, Nils-Oliver Linden, Teresa Reinhard, Leo Stenzel, Andreas Swoboda, Martin Grundner and Sam Mardazad
+https://syten.eu/
 
