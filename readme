@@ -31,10 +31,3 @@ make
 
 (3) Optional: Plot
 Run plot.py
-
-
-## SyTen reference calculations
-In SyTen-results there are reference calculations using the SyTen library
-by Claudius Hubig, Felix Lachenmaier, Nils-Oliver Linden, Teresa Reinhard, Leo Stenzel, Andreas Swoboda, Martin Grundner and Sam Mardazad
-https://syten.eu/
-
