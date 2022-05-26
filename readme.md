@@ -26,3 +26,9 @@ $ ./ExcitedDMRG <br />
 
 Optional: Run plot.py
 
+
+### Timings
+Memory 7,6 GiB <br />
+Processor Intel® Core™ i5-8265U CPU @ 1.60GHz × 8 <br />
+Graphics Mesa Intel® UHD Graphics 620 (WHL GT2) <br />
+OS Ubuntu 20.04.4 LTS <br />
