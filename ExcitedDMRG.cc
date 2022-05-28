@@ -38,7 +38,7 @@ void find_excited_states(std::string model="ising", int N=32, float spin=1.0, in
 	
 	// Set the parameters controlling the accuracy of the DMRG
 	// calculation for each DMRG sweep.
-	auto sweeps = Sweeps(50);
+	auto sweeps = Sweeps(30);
 	sweeps.maxdim() = 10,20,100,100,200,300;
 	sweeps.cutoff() = 1E-10;
 	sweeps.niter() = 2;
@@ -127,10 +127,21 @@ int main(){
 
 	// run some examples
 	// don't forget to change lattice to spinOne or spinHalf!
-	find_excited_states("ising", 4,  0.5, 3);
-	find_excited_states("ising", 8,  0.5, 3);
-	//find_excited_states("ising", 16, 0.5, 3);
+	//find_excited_states("ising", 4,  0.5, 3);
+	//find_excited_states("ising", 8,  0.5, 3);
+	find_excited_states("ising", 16, 0.5, 3);
 	//find_excited_states("ising", 32, 0.5, 3);
+	//find_excited_states("ising", 64, 0.5, 3);
+	//find_excited_states("ising", 128, 0.5, 3);
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 	return 0;
 }

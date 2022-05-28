@@ -97,8 +97,10 @@ def plot_energies(model='ising', N=16, spin='Half', compare=False):
 
 # ising16, ising32, heisenberg16, heisenberg32
 #plot_energies(model='ising', N=4, spin='Half', compare=True)
-plot_energies(model='ising', N=8, spin='Half', compare=True)
+#plot_energies(model='ising', N=8, spin='Half', compare=True)
 #plot_energies(model='ising', N=16, spin='Half', compare=True)
 #plot_energies(model='ising', N=32, spin='Half', compare=False)
+plot_energies(model='ising', N=64, spin='Half', compare=False)
+plot_energies(model='ising', N=128, spin='Half', compare=False)
 
 #edlf.table_to_files()
