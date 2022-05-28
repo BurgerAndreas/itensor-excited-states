@@ -32,7 +32,8 @@ void find_excited_states(std::string model="ising", int N=32, float spin=1.0, in
 	timings << "#J,E0,E1,E2" <<std::endl;
 
 	// Initialize the site degrees of freedom.
-	auto lattice = SpinHalf(N,{"ConserveQNs=", false}); //make a chain of N spin 1's
+	// TODO change by hand if you want spin 1 / spin 1/2
+	auto lattice = SpinHalf(N,{"ConserveQNs=", false}); //make a chain of N spin 0.5's
 	//auto lattice = SpinOne(N,{"ConserveQNs=", false}); //make a chain of N spin 1's
 	
 	// Set the parameters controlling the accuracy of the DMRG
@@ -127,7 +128,7 @@ int main(){
 	// run some examples
 	// don't forget to change lattice to spinOne or spinHalf!
 	find_excited_states("ising", 4,  0.5, 3);
-	//find_excited_states("ising", 8,  0.5, 3);
+	find_excited_states("ising", 8,  0.5, 3);
 	//find_excited_states("ising", 16, 0.5, 3);
 	//find_excited_states("ising", 32, 0.5, 3);
 

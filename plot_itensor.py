@@ -37,7 +37,7 @@ def plot_energies(model='ising', N=16, spin='Half', compare=False):
                     j_comp.append(float(row[0]))
                     energies_comp.append(row[1:])
         energies_comp = np.array(energies_comp, dtype=float)
-        file_comp.close()
+        compfile.close()
 
     # sort energies, in case GS converged to an excited state
     for cnt, row in enumerate(energies):
@@ -66,7 +66,7 @@ def plot_energies(model='ising', N=16, spin='Half', compare=False):
     # plot difference MPS to ED
     if compare:
         for e in range(3):
-            plt.plot(j_comp, np.abs(energies[21:, e]-energies_comp[:, e]), marker='x', lw=1, ms=4, label='|MPS-ED|' + str(e))
+            plt.plot(j_comp, np.abs(energies[20:, e]-energies_comp[:, e]), marker='x', lw=1, ms=4, label='|MPS-ED|' + str(e))
         plt.xlim([0.1, 2.1])
         # plt.grid(axis='both')
         plt.title('ITensor vs ED | ' + fname  + ' spin' + spin)
@@ -96,8 +96,9 @@ def plot_energies(model='ising', N=16, spin='Half', compare=False):
 
 
 # ising16, ising32, heisenberg16, heisenberg32
-#plot_energies(model='ising', N=4, spin='One', compare=True)
-#plot_energies(model='ising', N=8, spin='One', compare=True)
-#plot_energies(model='ising', N=16, spin='One', compare=True)
-plot_energies(model='ising', N=32, compare=False)
+#plot_energies(model='ising', N=4, spin='Half', compare=True)
+plot_energies(model='ising', N=8, spin='Half', compare=True)
+#plot_energies(model='ising', N=16, spin='Half', compare=True)
+#plot_energies(model='ising', N=32, spin='Half', compare=False)
 
+#edlf.table_to_files()
